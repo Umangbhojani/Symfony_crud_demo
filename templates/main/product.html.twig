@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+	<a href="{{ path('app_main') }}" class="btn btn-primary mt-4 md-4">Back</a>
 	<div class="container mt-5">
 		<div class="card shadow-lg p-4">
 			<h2 class="mb-4 text-center">{{form.vars.data.id  is null ? 'Add Product' : 'Update Product'}}</h2>
@@ -18,9 +19,9 @@
 				{{ form_widget(form.quntity, {'attr': {'class': 'form-control'}}) }}
 			</div>
 			<div>
-                 <button type="submit" class="btn btn-primary mt-2">
-                         {{form.vars.data.id  is null ? 'Save Product' : 'Update Product'}}
-                 </button>
+				<button type="submit" class="btn btn-primary mt-2">
+					{{form.vars.data.id  is null ? 'Save Product' : 'Update Product'}}
+				</button>
 			</div>
 		</div>
 		{{ form_end(form) }}
